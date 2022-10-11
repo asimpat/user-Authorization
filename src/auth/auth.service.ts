@@ -40,10 +40,7 @@ return user
 
   async login(user: any) {
     const newuser = await this.validateUser(user)
-    console.log(newuser);
-    
-    // const payload = { sub: user.id, email: user.email };
-    // console.log(payload);
+  
     
     return {
       access_token: this.jwtService.sign({
